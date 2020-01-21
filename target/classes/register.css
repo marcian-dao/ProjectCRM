@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'nebularegular';
+    src: url('../fonts/nebula-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nebula-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moondog_thirtyregular';
+    src: url('../fonts/moondogthirty-b95-webfont.woff2') format('woff2'),
+         url('../fonts/moondogthirty-b95-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moondog_zeroregular';
+    src: url('../fonts/moondogzero-ywv-webfont.woff2') format('woff2'),
+         url('../fonts/moondogzero-ywv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'xidusleadeanative';
+    src: url('../fonts/xidusleadeatechno-lm9y-webfont.woff2') format('woff2'),
+         url('../fonts/xidusleadeatechno-lm9y-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@keyframes pulse {
+	0%{
+
+		color: #EE0214;
+	}
+
+	50%{
+		color: #D4D7C4;
+	}
+	
+	100%{
+		color: #EE0214;
+	}
+}
+
+::selection {
+  background: rgba(253,149,62, .2); 
+}
+::-moz-selection {
+  background: rgba(253,149,62, .2); 
+}
+
+html,body{
+	font-family: 'nebularegular';
+	background-color: #010005;
+	background-image: url('http://getwallpapers.com/wallpaper/full/9/a/c/1516292-star-wars-star-destroyer-wallpaper-1920x1080-cell-phone.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	height: 100%;
+	width:auto;
+}
+
+.alert-danger{
+	font-family: 'moondog_thirtyregular';
+	background: transparent url("../img/polyester-lite.png") !important;
+	color: #CCCDBF;
+	border: 2px solid #FF0000;
+	width: auto;
+	margin-bottom: unset;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(250,13,13,1);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(250,13,13,1);
+	box-shadow: 0px 0px 10px 2px rgba(250,13,13,1);
+}
+
+.container{
+	height: auto;	
+	align-content: center;	
+}
+
+.card{
+	height: auto;
+	margin-top: 1rem;
+	margin-bottom: auto;
+	width: 20rem;
+	background-color: rgba(0,0,0,0.5);
+	padding-top: 1.5rem;
+	align-content: center;
+}
+#nebula{	
+	font-family: inherit;
+	width:auto;
+	border: unset;
+	background: transparent; 
+}
+
+#nebula h3{
+	font-family: inherit !important;
+	color: #CCCDBF;
+	font-size: 2rem;
+	text-align: center;
+	padding: .5rem;
+	margin-top: 1rem;
+	margin-bottom: unset;
+	background: -webkit-linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
+	background: linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;	    
+	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
+}
+
+#audio{
+	display:none;
+}
+
+.card-body input,select{
+	width: 14.3rem;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color:#495057;
+	background-color:#FFF;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0 .25rem .25rem 0;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#userRole{
+  width: 14.3rem;
+	border:none;
+}
+
+.error{
+	font-size: 85%;
+	font-family: 'moondog_thirtyregular';
+	color: #FF0000;
+	width:auto;
+	display:inline-block;
+	align-self:center;
+	float:left;
+	padding-left: 4em;	
+	animation: pulse 2.7s infinite;
+}
+
+.error br {
+	display: none;
+}
+
+.input-group{
+	width:auto;	
+	min-width: 280px;
+}
+
+.input-group-prepend .xidus {
+	font-family: 'xidusleadeanative';
+	color: #CCCDBF;
+}
+
+.form-input{
+	font-family: 'moondog_thirtyregular';
+	color: #676861;
+}
+.form-input::placeholder{
+	color: #FD953E;
+}
+
+.form-control{
+	width: 400px;
+}
+
+.form-control::placeholder{
+	color: #FD953E ;
+	font-family: 'moondog_zeroregular';
+}
+
+.alert{
+	text-align:center;
+	margin-left:1.8em;
+	margin-right:1.8em;
+	color:red;
+}
+
+.input-group-prepend span{
+	width: 50px;
+	background-color: hsla(27,98%,62%,0.7);
+	color: black;
+	border:0 ;
+}
+
+.input-group-prepend span:hover {
+	background-color: hsla(27,98%,62%,1.0);
+	border-radius: 5px 0 0 5px ;
+}
+
+.input-group input, select {
+	border-radius: 0 5px 5px 0;
+	border-color: #D1884A;
+	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
+	-moz-box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
+	box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
+}
+
+.input-group input:hover, input:focus, select:hover, select:focus {
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+}
+
+.card-footer input[type=submit]{
+	border-radius: 5px;
+	background-color: hsla(27,98%,62%,0.7);
+	font-family: 'nebularegular';
+}
+
+.card-footer input[type=submit]:hover{
+	color: #CCCDBF;
+	background-color: hsla(27,98%,62%,1.0);
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+}
+
+.row{
+	padding-left: 2rem;
+}
+
+.card-footer{
+	width: max-content;
+	background: transparent;
+	border: none;
+}

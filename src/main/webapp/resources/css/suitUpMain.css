@@ -1,0 +1,490 @@
+/*Colors: 
+
+		 #FF4400(#f40) 	-red-orange-neon-text-color
+  		 #0088FF(#08F)	-blue-neon-border-color
+	     #191970		-Midnight Blue
+	     #FD953E		-Orange
+	     #C6E2FF        -blue button shadow
+*/
+@font-face {
+    font-family: 'moondog_zeroregular';
+    src: url('../fonts/moondogzero-ywv-webfont.woff2') format('woff2'),
+         url('../fonts/moondogzero-ywv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moondog_thirtyregular';
+    src: url('../fonts/moondogthirty-b95-webfont.woff2') format('woff2'),
+         url('../fonts/moondogthirty-b95-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nebularegular';
+    src: url('../fonts/nebula-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nebula-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avayx_regularregular';
+    src: url('../fonts/avayx-1yyv-webfont.woff2') format('woff2'),
+         url('../fonts/avayx-1yyv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icelandregular';
+    src: url('../fonts/iceland-regular-webfont.woff2') format('woff2'),
+         url('../fonts/iceland-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100%; }
+}
+
+@keyframes neon {
+  from {
+     box-shadow:  	
+	    0 0 6px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 30px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 12px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 21px var(--neon-border-color),
+	    inset 0 0 2px var(--neon-border-color),
+	    0 0 34px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 54px var(--neon-border-color),
+	    inset 0 0 4px var(--neon-border-color);
+  }
+
+  to {
+    box-shadow:    
+	    0 0 6px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 30px var(--neon-border-color),
+	    inset 0 0 3px rgba(202,228,225,0.42),
+	    0 0 12px var(--neon-border-color),
+	    inset 0 0 1px rgba(30,132,242,0.58),
+	    0 0 22px var(--neon-border-color),
+	    inset 0 0 2px rgba(30,132,242,0.84),
+	    0 0 38px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 60px var(--neon-border-color),
+	    inset 0 0 4px var(--neon-border-color);
+  }
+}
+
+@keyframes flash_border {
+  0% {
+    border-color: #70b7ff;
+  }
+  35% {
+    border-color: #80bfff;
+  }
+  60% {
+    border-color: #8fc6ff;
+  }
+  100% {
+    border-color: #9bc7fa;
+  }
+}
+
+@-webkit-keyframes flash_border {
+  0% {
+    border-color: #70b7ff;
+  }
+  35% {
+    border-color: #80bfff;
+  }
+  60% {
+    border-color: #8fc6ff;
+  }
+  100% {
+    border-color: #9bc7fa;
+  }
+}
+
+@-moz-keyframes flash_border {
+  0% {
+    border-color: #70b7ff;
+  }
+  35% {
+    border-color: #80bfff;
+  }
+  60% {
+    border-color: #8fc6ff;
+  }
+  100% {
+    border-color: #9bc7fa;
+  }
+}
+
+:root {
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+::selection {
+  background: rgba(253,149,62, .2); 
+}
+::-moz-selection {
+  background: rgba(253,149,62, .2); 
+}
+
+html,body {
+	padding: 40px;
+	background-color: navy;
+	background: url('http://getwallpapers.com/wallpaper/full/3/5/7/170948.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+nav {
+	position: relative;
+	z-index: 1;
+	padding-left: 1em;
+	font-family: 'avayx_regularregular';
+}
+
+nav > a {
+	position: relative;
+	display: inline-block;
+	padding: .3em 2em 0;
+	color: inherit;
+	text-decoration: none;
+	margin: 0 -.3em;
+} 
+nav > a:link {
+  text-decoration: none;
+}
+
+nav > a::before,
+main {
+	border: .1em solid rgba(0,0,0,.4);
+}
+
+nav a::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+	border: 0.4rem solid #c6e2ff;
+	border-bottom: none;
+	border-radius: .5rem .5rem 0 0;
+	background: #1a0aff linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
+	transform: scale(1.1, 1.3) perspective(.5em) rotateX(5deg);
+	transform-origin: bottom;
+	/*animation: neon .08s ease-in-out infinite alternate, flash_border .08s ease-in-out infinite;
+	animation-delay: .5s;*/
+}
+
+nav a.selected { 	
+	z-index: 2;
+	color:#f40;
+	
+	
+}
+nav a.selected:hover{
+	text-align: center;
+	text-shadow: 0px 0px 20px #800000;
+}
+
+nav a.selected::before {
+	background-color: #eee;
+	margin-bottom: -.08rem;
+}
+
+nav a#userRole {
+	float:right;
+	margin-right: .85rem;
+	color: #FF0000;
+}
+
+#userWrapper{	
+	background-image: url('../img/polyester-lite.png'), url('../img/kisspng-black-and-white-line-angle-point-vector-scratches-5a7441073ba932.4083435415175682632444.png'), url('http://getwallpapers.com/wallpaper/full/3/5/7/170948.jpg');
+	background-repeat: repeat, no-repeat, repeat;
+	background-attachment: scroll, scroll, fixed;
+	background-size: auto, auto, cover;
+	background-position:
+	    top 0px left 0px,
+	    top 52% right 0px,
+	    top 0px left 0px;
+    
+
+	border-radius: .3em;
+	z-index: 99;
+	-webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	-webkit-box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+}
+
+#userWrapper #bgrd{
+	border: 0.1rem solid rgba(198, 228, 255, 0.5);
+	position: relative;
+	margin-top: .5rem;
+	background: hsla(0,0%,100%,.25) border-box;
+	background:  repeat-x, repeat-y;
+	background-size: contain;
+	padding: 2rem;
+	opacity:0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+	text-align:center;
+	overflow: hidden;
+	border-radius: .3em;
+	text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+	-webkit-box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 14px 7px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.75);
+}
+
+body main {
+	position: relative;
+	margin-bottom: 1rem;
+	padding: 2rem 1rem;
+	border: 0.4rem solid rgba(198, 228, 255,0.9);
+	border-radius: .2rem .2rem .5rem .5rem;	
+	/*Photo by Lucas Davies on Unsplash*/
+	background: #1a0aff url("../img/lucas-davies-BjBBoZlKF7k-unsplash.jpg") repeat; 
+	background-position: center;
+	background-size: cover;
+	background-origin: border-box;
+
+	box-shadow:
+        0 0 .3rem #fff,
+        inset 0 0 .1rem #fff,
+        0 0 1rem var(--neon-border-color),
+        inset 0 0 .5rem var(--neon-border-color),
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 1rem var(--neon-border-color);
+
+	     /* animation: neon .08s ease-in-out infinite alternate, flash_border .08s ease-in-out infinite;  
+        animation-delay: .5s;*/      
+    }
+
+#container {
+	width: 100%; 
+	height: auto; 
+	margin:auto; 
+	position: relative;
+	background-origin: border-box;
+}
+
+#container #content {
+	border: 1px solid rgba(198, 228, 255, 0.6);
+	background: #1a0aff;
+	-webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+}
+#container #content .btn {
+	width: 5rem !important;
+	margin-right: .5rem;
+	margin-bottom: .1rem;
+}
+
+#container #content #addressLink {color : #032E5C;}
+#container #content #addressLink:hover {
+	background-color: hsla(27,98%,62%,0.7);
+	background-image:  url("../img/polyester-lite.png");
+}
+#container #content #updateLink {color : #032E5C;}
+#container #content #updateLink:hover {
+	background-image:  url("../img/polyester-lite.png");
+	background-color: hsla(27,98%,62%,0.7);
+}
+#container #content #deleteLink {color : #c70404;}
+#container #content #deleteLink:hover{ 
+	background-color: hsla(27,98%,62%,0.7);
+	background-image:  url("../img/polyester-lite.png");
+}
+
+.error {	
+	color: #FF0000;
+}
+
+.mx-auto{
+	margin-top: .25rem;
+	min-width: 400px;
+}
+
+#left-button{
+	margin-left: .5rem;
+	background: transparent;
+	border: none;
+	min-width: 100px;
+}
+#right-button{
+	margin-right: .5rem;
+	background: transparent;
+	border: none;
+	min-width: 100px;
+}
+.row{
+	font-family: 'nebularegular';
+	padding: .5rem 0;
+}
+.row input{
+	border: 0.1rem solid rgba(198, 227, 255, .5);
+}
+
+.py-2{
+	font-family: 'moondog_thirtyregular', sans-serif;
+	color: #191970 !important;
+}
+
+.py-2::placeholder {    
+   font-family: 'moondog_zeroregular', sans-serif;
+   color: #FEA40D;
+}
+
+.btn-warning{
+	background: #FFA50D url("../img/Distressed Texture_13.png") repeat;
+	background-size: cover;
+	background-position: bottom;
+	color: #191970;
+}
+
+.btn-warning:hover{
+	color: #BBDBF9;
+	text-shadow: 0 0 10px #FFFFFF, 2px 2px 2px rgba(187,219,249,0);
+	background-color: : #FD953E;	
+	-webkit-box-shadow: 0px 0px 2px 2px rgba(198,226,255,1);
+	-moz-box-shadow: 0px 0px 2px 2px rgba(198,226,255,1);
+	box-shadow: 0px 0px 1px 2px rgba(198,226,255,1);
+	-webkit-box-shadow: inset 0px 0px 1px 2px rgba(198,226,255,1);
+	-moz-box-shadow: inset 0px 0px 1px 2px rgba(198,226,255,1);
+	box-shadow: inset 0px 0px 1px 2px rgba(198,226,255,1);
+}
+
+table { 
+	animation:unset;
+	border-collapse:collapse;
+	border-bottom:1px solid #696969;
+	font-family: 'icelandregular';
+	font-size: 1.2rem;
+	position: relative;
+	color: #191970;
+	width: 100%;
+	border-radius: 5rem;
+}
+ 
+th {
+	border-bottom: 1px solid #696969;
+	padding:10px;
+	font-family: 'avayx_regularregular';
+	font-size: .8rem;
+}
+
+tr {
+	border-top: 1px solid #696969;
+	text-align: center;	
+	position: relative;
+	/*z-index: 10;*/
+  }
+
+#bckgnd{
+	background-image: url('../img/kisspng-black-and-white-line-angle-point-vector-scratches-5a7441073ba932.4083435415175682632444.png')  , url('../img/img-noise-361x370.png');
+	background-repeat: no-repeat, repeat;
+	background-size: auto, auto;
+	background-position:
+    	top .3% left 20%,
+   		top 0px right 0px;
+}
+
+tr:not(:first-child):hover{
+	position: relative;
+	z-index: 99;
+	color: var(--neon-text-color);
+    -webkit-box-shadow: inset 0px 0px 4px 2px rgba(198,226,255,1);
+    -moz-box-shadow: inset 0px 0px 4px 2px rgba(198,226,255,1);
+    box-shadow: inset 0px 0px 4px 2px rgba(198,226,255,1);	
+}
+
+tr:nth-child(even) {
+	background: #FFFFFF url("../img/polyester-lite.png");
+	border-top: 1px solid var(--neon-border-color);
+	/*animation: flash_border .08s ease-in-out infinite;
+	animation-delay: .5s;*/
+}
+tr:nth-child(odd) {
+	background: #F3F3F3 url("../img/polyester-lite.png");
+	border-top: 1px solid var(--neon-border-color);
+	/*animation: flash_border .08s ease-in-out infinite;
+	animation-delay: .5s;*/
+}
+
+h2 {	
+	margin: 0 auto;
+	padding-top: .5rem;
+	display: inline-block;
+	font-family: 'nebularegular';
+	font-size: 2rem;
+	color: #FF4400 !important;	
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 3s steps(15);
+	border-right: .1em solid transparent;
+	text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+	stroke: black; 
+	stroke-width: 6;
+	stroke-linejoin: round;
+	margin-bottom: unset;
+}	 
+
+#add-user{
+	margin-top: 2rem;
+	background: transparent;
+	font-family: 'nebularegular', sans-serif;
+	width:100%;
+	
+}
+#add-user input[type=button]{
+	border-radius: .25rem;
+	background-color: hsla(27,98%,62%,0.7);
+	width: 100%;
+	color: #CCCDBF;
+	text-shadow: 1px 1px #191970, -1px -1px #191970, 1px -1px #191970, -1px 1px #191970;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
+
+	background-image:  url("../img/polyester-lite.png");
+}
+
+#add-user input[type=button]:hover{
+	/*background-color: hsla(27,98%,62%,1.0);*/
+
+
+background: -webkit-radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
+background: radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
+
+
+	color: #191970;
+	text-shadow: 1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF, -1px 1px #FFF;
+}

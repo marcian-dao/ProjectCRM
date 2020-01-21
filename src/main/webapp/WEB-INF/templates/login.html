@@ -1,0 +1,91 @@
+<!DOCTYPE html5>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="			sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="login.css" th:href="@{resources/css/login.css}"/> 
+
+    <title>Login Page</title>	
+</head>
+
+<body>
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="text">Sign in</h3>
+				</div>
+				<form action="#"
+					  th:action="@{/authenticateTheUser}"			  
+					  method="POST"
+					  >
+					 	
+					<span th:if="${param.error != null}">											
+						<div class="alert alert-danger ">
+							Invalid username or password.
+						</div>							
+					</span> 
+
+					<div class="card-body">
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">U</span>
+							</div>
+
+							<input type="text" 
+								autofocus="autofocus"
+								name="username"
+								placeholder="Username" 								
+								class="form-control has-error help-block"
+							>
+
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">P</span>
+							</div>
+
+							<input 
+								type="password" 
+								placeholder="Password"
+								name="password"
+								class="form-control"
+							>
+						</div>
+						
+						<div class="form-group">
+							<input type="submit" value="Login"
+								class="btn float-left btn-success login_btn"></button>
+						</div>
+
+					</div>
+					<div class="footer">
+						<div class="footer-content">
+							<span class="float-left">Don't have an account?</span>
+							<input type="button" value="Sign Up"
+							onclick="window.location.href='showRegistrationForm'; return false;"
+							class="btn btn-outline-danger btn-sm float-right"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--[if lt IE 9]>
+	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+</body>
+</html>

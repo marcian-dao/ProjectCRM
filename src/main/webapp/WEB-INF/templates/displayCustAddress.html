@@ -1,0 +1,65 @@
+<!DOCTYPE html5>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Customer Address</title>
+
+        <link
+			href="bootstrap.min.css"
+			th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css}"
+			rel="stylesheet" id="bootstrap-css"/>
+
+			<link rel="stylesheet" href="register.css" th:href="@{resources/css/address.css}"/>
+
+    </head>
+	<body>
+
+		<div class="container container-md container-fluid ">
+	
+		<input type="button" value="GO BACK"
+			   onclick="window.location.href='showAllCustomers'; return false;"
+			   class="btn btn-outline-primary btn-sm"/>				
+						
+			<main>				
+				<table>
+					<thead> 
+						<div id="top">
+							<h4 id="user">
+								<span id="name"  
+									  th:text="|${customer.firstName} ${customer.lastName}|">
+								</span>
+							</h4>
+						</div>
+					</thead>
+					<tbody>						
+						<tr>
+							<th>ID</th>
+							<th>HOUSE NR.</th>
+							<th>STREET</th>
+							<th>CITY</th>
+							<th>POST CODE</th>
+							<th>COUNTRY</th>
+						</tr>
+					
+						<tr id="bottom-row">
+							<td> <span th:text="${cusomerAddress.id}"></span></td>
+							<td> <span th:text="${cusomerAddress.house}"></span></td>
+							<td> <span th:text="${cusomerAddress.street}"></span></td>
+							<td> <span th:text="${cusomerAddress.city}"></span></td>
+							<td> <span th:text="${cusomerAddress.postCode}"></span></td>
+							<td> <span th:text="${cusomerAddress.country}"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</main>					
+		</div>
+
+		<script th:src="@{//code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+   	    <script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+   	    
+	</body>
+</html>

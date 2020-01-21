@@ -1,0 +1,182 @@
+<br>
+<!DOCTYPE html5>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+		href="bootstrap.min.css"
+		th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css}"
+		rel="stylesheet" id="bootstrap-css"/>
+
+		<link rel="stylesheet" href="register.css" th:href="@{resources/css/register.css}"/>
+
+	<title>Registration Page</title>	
+</head>
+
+<body>		
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div id="nebula" class="card-header d-flex justify-content-center">
+					<h3>Sign Up</h3>
+				</div>
+				<form th:action="@{/registerTheUser}" action="#" method="POST" 
+					  th:object="${crmUser}">
+						
+					<span th:if="${registrationError != null}">						
+						<div class="alert alert-danger" th:text="${registrationError}">
+							  
+						</div>	
+					</span>	
+												
+					<div class="card-body">
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">UR</span>
+							</div>
+							<input 
+								  autofocus="autofocus"
+								  type="text" class="form-input"
+								  placeholder="Username" 
+								  required="required"
+						   		  th:field="*{userName}" 
+						   	> 	   
+
+							<span class="error" 
+								  th:if="${#fields.hasErrors('userName')}" 
+								  th:errors="*{userName}">
+						   			Name Error
+	                        </span>
+
+						</div>
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">PD</span>
+							</div>
+							<input type="password" class="form-input"
+								   placeholder="Password" 
+								   required="required"
+						   		   th:field="*{password}" 
+						   	>
+	              
+						   	<span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+						   		Name Error
+	                        </span>
+						   		   
+						</div>
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">MP</span>
+							</div>
+							<input type="password" class="form-input"
+								   placeholder="Matching Password"  
+					               required="required"
+						           th:field="*{matchingPassword}"						           
+						   	>
+						   	
+						   	<span class="error" th:if="${#fields.hasErrors('matchingPassword')}" 
+						   		  th:errors="*{matchingPassword}">
+						   		Name Error
+	                        </span>
+
+						</div>		
+						
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">FN</span>
+							</div>
+							<input type="text" class="form-input"
+								   placeholder="First Name" 
+								   required="required"
+						   		   th:field="*{firstName}" 
+						   	>
+
+							<span class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">
+						   			Name Error
+	                        </span>
+						</div>
+		
+
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">LN</span>
+							</div>
+							<input type="text" class="form-input"
+								   placeholder="Last Name" 
+								   required="required"
+						   		   th:field="*{lastName}" 
+						   	>	
+
+							<span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">
+						   			Name Error
+	                        </span>
+						</div>
+						
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="xidus input-group-text">EL</span>
+							</div>
+							<input type="email" class="form-input"
+								   placeholder="Email" 
+								   required="required"
+						   		   th:field="*{email}" 
+						   	>	
+
+							<span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+						   			Name Error
+	                        </span>
+						</div>
+					
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+									<span class="xidus input-group-text">RE</span>
+							</div>	
+		   
+							<select class="form-input" required="required" th:field="*{userRole}">
+								<option 
+										th:each="role : ${crmUser.roles}" 
+										th:text="${role.key}" 
+										th:value="${role.value}" 
+										value="XXX">Role
+							    </option>
+
+							</select>	      
+						</div>
+					
+						<div class="card-footer">
+							<div class="d-flex justify-content-center">
+								<input type="submit" value="Save new user">
+							</div>
+						</div>
+					</div>
+
+					<span id="audio" th:if="${#fields.hasErrors('*')}">	
+						<figure>  
+						    <audio
+						        autoplay
+						        th:src="@{..\resources\mp3\imperial_alert.mp3}">
+						            Your browser does not support the
+						            <code>audio</code>
+				    		</audio>
+						</figure>
+					</span>	
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--[if lt IE 9]>
+	 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script th:src="@{//code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+    <script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>

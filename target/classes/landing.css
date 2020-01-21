@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'nebularegular';
+    src: url('../fonts/nebula-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nebula-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+@keyframes caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(215, 181, 146, .5); }
+}
+
+::selection {
+  background: rgba(253,149,62, .2); 
+}
+::-moz-selection {
+  background: rgba(253,149,62, .2); 
+}
+
+html,body{
+	background-color: #010005;
+	background-image: url('http://getwallpapers.com/wallpaper/full/4/5/7/1484541-black-and-yellow-wallpaper-2048x1152-for-windows.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	height: 100%;
+	width:auto;
+	position: relative;
+}
+
+#confirm h2{	
+	background: -webkit-linear-gradient(116deg, rgb(244, 230, 20), rgb(0, 0, 0));
+	background: linear-gradient(116deg, rgb(244, 230, 20), rgb(0, 0, 0));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;	    
+	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
+	font-family: 'nebularegular';
+	font-size: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 10.5rem;
+	width: 36ch;
+	margin: 0 auto; 
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 0.1em solid #F6EDCE;
+	animation: typing 3s steps(15), caret 1s steps(1) infinite;
+}

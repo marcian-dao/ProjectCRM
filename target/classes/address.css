@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'nebularegular';
+    src: url('../fonts/nebula-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nebula-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moondog_thirtyregular';
+    src: url('../fonts/moondogthirty-b95-webfont.woff2') format('woff2'),
+         url('../fonts/moondogthirty-b95-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icelandregular';
+    src: url('../fonts/iceland-regular-webfont.woff2') format('woff2'),
+         url('../fonts/iceland-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(232, 211, 181, .75); }
+}
+
+@keyframes neon {
+  from {
+     box-shadow:  	
+	    0 0 6px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 30px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 12px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 21px var(--neon-border-color),
+	    inset 0 0 2px var(--neon-border-color),
+	    0 0 34px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 54px var(--neon-border-color),
+	    inset 0 0 4px var(--neon-border-color);
+  }
+
+  to {
+
+    box-shadow: 
+	    0 0 6px var(--neon-border-color),
+	    inset 0 0 1px var(--neon-border-color),
+	    0 0 30px var(--neon-border-color),
+	    inset 0 0 3px rgba(202,228,225,0.42),
+	    0 0 12px var(--neon-border-color),
+	    inset 0 0 1px rgba(30,132,242,0.58),
+	    0 0 22px var(--neon-border-color),
+	    inset 0 0 2px rgba(30,132,242,0.84),
+	    0 0 38px var(--neon-border-color),
+	    inset 0 0 3px var(--neon-border-color),
+	    0 0 60px var(--neon-border-color),
+	    inset 0 0 4px var(--neon-border-color);
+  }
+}
+
+:root {
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+::selection {
+  background: rgba(253,149,62, .2); 
+}
+::-moz-selection {
+  background: rgba(253,149,62, .2); 
+}
+
+html,body{
+	font-family: 'moondog_thirtyregular';
+	background-color: #010005;
+	background-image: url('http://getwallpapers.com/wallpaper/full/4/2/b/168477.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	height: 100%;
+	width:auto;
+}
+.container{
+	margin: 0 auto;
+	position: relative;
+	top:25%;
+}
+#top{
+	display: block;
+	width: max-content;
+	margin: 0 auto;
+}
+#top #user{
+	width: max-content;
+	text-align: center;	
+	font-family: 'nebularegular';
+	font-size: 2rem;
+	color: #E8D3B5 !important;
+	padding: .5rem .5rem 0 .5rem;
+	height: auto;
+	background: -webkit-linear-gradient(-180deg, rgb(233, 223, 204), rgb(117, 175, 226));
+	background: linear-gradient(-180deg, rgb(233, 223, 204), rgb(117, 175, 226));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;	    
+	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
+	overflow: hidden; 
+  	white-space: nowrap; 
+  	margin: 0 auto; 
+  	letter-spacing: .10em; 
+  	animation: typing 3s steps(15), caret .75s step-end 7;
+	border-right: .1em solid transparent;
+}
+
+.d-inline-flex{
+	padding-left: 4rem;
+}
+
+input[type=button]{
+	position: fixed; 
+	top: .5rem;
+	right: .5rem;
+	transition: 1s;
+}
+
+input[type=button]:hover{
+	color: #E9DFCC;
+	text-shadow: 0 0 .1em, 0 0 .3em;
+}
+
+table{
+	margin: 0 auto;
+}
+
+tbody{
+	background: transparent url("../img/polyester-lite.png") repeat;
+	display: block;
+	padding: 1.5rem 2rem .5rem 2rem;
+	box-shadow:
+        0 0 .5rem #fff,
+        inset 0 0 .5rem #fff,
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 1rem var(--neon-border-color),
+        0 0 4rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color); 
+}
+
+tbody tr{
+	color: #FD953E;
+	text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+	white-space: nowrap;
+}
+
+table th{
+	font-family: 'icelandregular';
+	font-size: 1rem;
+	padding: 0 2rem .5rem 2rem;
+}
+
+table td{
+	font-family: 'icelandregular';	
+	font-size: 2rem;
+	padding: 2rem 2rem;
+}
+
+table th, td{
+	text-align: left;
+}
+
+#bottom-row{
+	border-top: .2px solid #75AEE2;	
+}

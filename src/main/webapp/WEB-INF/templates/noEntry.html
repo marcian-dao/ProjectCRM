@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="refresh" content="3;url=url=loginPage" />
+
+
+
+        <title>404</title>
+
+        <link rel="stylesheet" href="register.css" th:href="@{resources/css/404.css}"/>
+
+        <link
+			href="bootstrap.min.css"
+			th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css}"
+			rel="stylesheet" id="bootstrap-css"/>
+
+    </head>
+	<body>
+
+		<script th:src="@{//code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+   	    <script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+
+
+
+   	    <div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header">
+						<h3>404</h3>
+					</div>
+					<div><a th:href="@{/}" href="home">RUN</a></div>
+				</div>
+			</div>
+		</div>			
+
+   	 </body>
+   	 </html>   

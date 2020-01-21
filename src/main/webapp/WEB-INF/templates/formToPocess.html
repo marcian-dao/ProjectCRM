@@ -1,0 +1,184 @@
+<!DOCTYPE html5>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Registration Page</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="formToProcess.css" th:href="@{resources/css/formToProcess.css}"/>
+
+    </head>
+	<body>
+		
+		<div class="container">
+
+			<div class="d-flex justify-content-center">
+
+				<div class="card">
+
+					<div class="card-header d-flex justify-content-center">
+						<h4>Add customer</h4>
+					</div>
+
+					<form th:action="@{/processForm}" method="POST" th:object="${customer}" >
+
+						<input type="hidden" th:field="*{id}"/>
+						
+						<div class="card-body">
+
+							<div class="input-group form-group">
+								
+								<input type="text" class="form-input"
+									   placeholder="First Name" 
+									   required="required"
+							   		   th:field="*{firstName}" 
+							   		   /> 
+
+								<span class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">
+							   			Name Error>
+	                            </span>
+
+							</div>
+
+							<div class="input-group form-group">
+								
+								<input type="text" class="form-input"
+									   placeholder="Last Name" 
+									   required="required"
+							   		   th:field="*{lastName}" 
+							   		   />
+	                  
+							   	<span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">
+							   		Name Error>
+	                            </span>
+							   		   
+							</div>
+
+							<div class="input-group form-group">
+								
+								<input type="text" class="form-input"
+									   placeholder="Email"  
+						               required="required"
+							           th:field="*{email}"						           
+							   		   />
+							   	
+							   	<span class="error" th:if="${#fields.hasErrors('email')}" 
+							   		  th:errors="*{email}">
+							   		Name Error>
+	                            </span>
+
+							</div>		
+							
+							<div class="input-group form-group">
+								
+								<input type="text" class="form-input"
+									   placeholder="Phone" 
+									   required="required"
+							   		   th:field="*{phone}" 
+							   		   />
+
+								<span class="error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">
+							   			Name Error>
+	                            </span>
+							</div>
+			
+						</div>
+
+
+
+						
+
+						<div class="card-body" method="POST" th:object="${customerAddress}">
+
+							<div class="input-group form-group">
+								
+								<input type="text" class="form-input"
+									placeholder="House Number" 
+									required="required"
+								   	th:field="*{house}" 
+								   	/>	
+
+								<span class="error" th:if="${#fields.hasErrors('house')}" th:errors="*{house}">
+								   		Name Error>
+		                        </span>
+								</div>
+								
+								<div class="input-group form-group">
+									<input type="text" class="form-input"
+										   placeholder="Street" 
+										   required="required"
+								   		   th:field="*{street}" 
+								   		   />	
+
+									<span class="error" th:if="${#fields.hasErrors('street')}" th:errors="*{street}">
+								   			Name Error>
+		                            </span>
+								</div>
+
+
+								<div class="input-group form-group">
+									
+									<input type="text" class="form-input"
+										   placeholder="City" 
+										   required="required"
+								   		   th:field="*{city}" 
+								   		   />	
+
+									<span class="error" th:if="${#fields.hasErrors('city')}" th:errors="*{city}">
+								   			Name Error>
+		                            </span>
+								</div>
+
+								<div class="input-group form-group">
+									
+									<input type="text" class="form-input"
+										   placeholder="Post Code" 
+										   required="required"
+								   		   th:field="*{postCode}" 
+								   		   />	
+
+									<span class="error" th:if="${#fields.hasErrors('postCode')}" th:errors="*{postCode}">
+								   			Name Error>
+		                            </span>
+								</div>
+
+
+							
+								<div id="select" class="input-group form-group">
+								
+				   
+									<select class="form-input" required="required" th:field="*{country}">
+
+										<option th:each="country : ${customerAddress.countryOptions}" 
+												th:text="${country.value}" 
+												th:value="${country.key}" 
+												value="XXX">Country
+
+									    </option>
+
+									</select>	      
+								</div>
+							</div>	
+											
+					<div class="card-footer">
+						<div class="d-flex justify-content-center">
+							<input type="submit" value="Update" class="button"/>
+						</div>
+					</div>		
+					</form>
+			</div>
+		</div>	
+	</div>
+
+	<script th:src="@{//code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+   	<script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

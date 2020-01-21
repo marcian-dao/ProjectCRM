@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'nebularegular';
+    src: url('../fonts/nebula-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nebula-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes typing {
+	from { width: 0 }
+}
+
+@keyframes caret {
+	50% {border-color: currentColor;}
+}
+
+::selection {
+  background: rgba(253,149,62, .2); 
+}
+::-moz-selection {
+  background: rgba(253,149,62, .2); 
+}
+
+html,body{
+	background: #010005 url('http://getwallpapers.com/wallpaper/full/a/1/d/1480982-beautiful-mars-wallpaper-hd-1920x1080-retina.jpg') no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+	height: 100%;
+	width:auto;
+	position: relative;
+}
+
+#confirm h2{
+	font-family: 'nebularegular';
+	background: -webkit-linear-gradient(151deg, rgb(238, 232, 236), rgb(188, 117, 64));
+	background: linear-gradient(151deg, rgb(238, 232, 236), rgb(188, 117, 64));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;	    
+	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
+	position: absolute;
+	left: 40rem;
+	bottom: 3rem;
+	width: 20.4ch;
+	margin: 0 auto; 
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 0.1em solid #F6EDCE;
+	animation: typing 3s steps(15), caret 1s steps(1) 5;
+}	

@@ -1,0 +1,32 @@
+<!DOCTYPE html5>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Registration Page</title>
+
+        <link rel="stylesheet" href="register.css" th:href="@{resources/css/register.css}"/>
+
+        <link
+			href="bootstrap.min.css"
+			th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css}"
+			rel="stylesheet" id="bootstrap-css"/>
+
+    </head>
+	<body>
+		
+		<script th:src="@{//code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+   	    <script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+
+		<div class="container">
+
+			<p>Ooops...Wrong place, Wrong time!</p>
+	
+			<a th:href="@{/}">Go back now!</a>
+
+		</div>	
+	</body>
+	</html>	

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="projectMaven">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources/dbProperties"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources/appProperties"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/images"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/js"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources/templates"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/css"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/img"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/mp3"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/fonts"/>
+        <property name="context-root" value="projectMaven"/>
+        <property name="java-output-path" value="/projectMaven/target/classes"/>
+    </wb-module>
+</project-modules>
