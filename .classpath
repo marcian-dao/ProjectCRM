@@ -9,7 +9,6 @@
 	<classpathentry kind="src" path="src/main/webapp/resources/fonts"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/mp3"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/img"/>
-	<classpathentry kind="src" path="src/main/webapp/resources/js"/>
 	<classpathentry kind="src" path="src/main/resources/templates"/>
 	<classpathentry kind="src" path="src/main/resources/appProperties"/>
 	<classpathentry kind="src" path="src/main/resources/dbProperties"/>
