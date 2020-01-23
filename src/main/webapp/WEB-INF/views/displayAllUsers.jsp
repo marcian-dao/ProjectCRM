@@ -6,14 +6,10 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
-	  crossorigin="anonymous">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"/>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">	
-
-<link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/suitUpMain.css">
+	<link type="text/css" rel="stylesheet"
+		href="${pageContext.request.contextPath}/resources/css/suitUpMain.css">
 
 </head>
 <body>
@@ -84,5 +80,9 @@
 			</div>								
 		</div>
 	</main>	
+
+	<script src="resources/js/jquery-3.4.1.slim.min.js"></script>
+   	<script src="resources/js/bootstrap.min.js"></script>
+
 </body>
 </html>
