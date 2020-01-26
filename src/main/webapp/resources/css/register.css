@@ -122,9 +122,8 @@ html,body{
 	width: 14.3rem;
 	padding: .375rem .75rem;
 	font-size: 1rem;
-	line-height: 1.5;
 	color:#495057;
-	background-color:#FFF;
+	background-color:#000;
 	background-clip: padding-box;
 	border: 1px solid #ced4da;
 	border-radius: 0 .25rem .25rem 0;
@@ -162,7 +161,8 @@ html,body{
 	color: #CCCDBF;
 }
 
-.form-input{
+.card-body .form-group .form-input{
+	background-color: #FFF;
 	font-family: 'moondog_thirtyregular';
 	color: #676861;
 }
@@ -234,4 +234,5 @@ html,body{
 	width: max-content;
 	background: transparent;
 	border: none;
+	margin-top: 2rem;
 }

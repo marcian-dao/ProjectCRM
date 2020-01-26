@@ -120,8 +120,7 @@ html,body{
 	width: 100%;
 	padding: .375rem .75rem;
 	font-size: 1rem;
-	line-height: 1.5;
-	background-color:#FFF;
+	background-color:#000;
 	background-clip: padding-box;
 	border: 1px solid #ced4da;
 	border-radius: .25rem; 
@@ -130,6 +129,11 @@ html,body{
 	-moz-box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
 	box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
 }
+
+.card-body .form-group .form-input{
+	background-color: #FFF;
+}	
+
 .form-input::placeholder{
 	color: #FD953E;
 }
@@ -187,4 +191,5 @@ html,body{
 	width: auto;
 	background: transparent;
 	border: none;
+	margin-bottom: 1.5rem;
 }
