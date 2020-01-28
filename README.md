@@ -6,7 +6,7 @@ The purpose of the project is to show to the potential employers my abilities to
 
 Java, Spring-MVC, Spring-Security, Spring AOP, Hibernate, MySQL, Maven, JSP, Thymeleaf, Html5, CSS3.
   
-Project is linked to external DB on AWS servers, so there is no need to use MySQL scripts.
+Project is linked to the external DB on AWS servers, so there is no need to use MySQL scripts.
 
 All of the emloyers are free to download or clone this project if needed. 
   
