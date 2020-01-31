@@ -25,7 +25,7 @@ public class TestJDBC extends HttpServlet {
 			String driver = "com.mysql.jdbc.Driver";
 			
 			PrintWriter out = response.getWriter();
-			out.println("CONNECTING TO DATABASE!!!!!!!!!!!!!!!!");
+			out.println("CONNECTING TO DATABASE!");
 			
 			Class.forName(driver);
 			

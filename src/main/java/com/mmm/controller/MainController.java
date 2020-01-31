@@ -40,7 +40,6 @@ public class MainController {
 	@Autowired
 	private CustomerService customerService;
 
-
 	@GetMapping("/showLogin")
 	public String showLoginPage() {
 
@@ -76,25 +75,20 @@ public class MainController {
 			customerEntity.setRegistrationDate(date);
 
 			customerService.addCustomer(customerEntity);
-
 		}
-
 		return "redirect:/showAllCustomers";
 	}
 
 	@GetMapping("/showCustomerAddress")
 	public String displayCustomerAddress(@RequestParam("customerId") int theId, Model customerModel, Model addressModel) {
-
-		
+	
 		CustomerDetails theCustomreName = customerService.getCustomer(theId);
 		CustomerAddress theCustomerAddress = customerService.getCustomerAddress(theId);
 		
 		customerModel.addAttribute("customer", theCustomreName);
 		addressModel.addAttribute("cusomerAddress", theCustomerAddress);
 		
-
 		return "displayCustAddress.html";
-
 	}
 
 	@GetMapping("/update")
