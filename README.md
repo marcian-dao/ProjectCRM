@@ -13,5 +13,5 @@ All of the emloyers are free to download or clone this project if needed.
 Crafted by Marcin Bach.  
 Licence: GNU AGPLv3  
   
-If you like it, please give me a feedback. 
+Any comments would be welcome. 
 
