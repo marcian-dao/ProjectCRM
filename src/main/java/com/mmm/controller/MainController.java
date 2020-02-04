@@ -68,7 +68,7 @@ public class MainController {
 
 		} else {	
 			
-			customerEntity.setCustomerAddress(customerAddressEntity); // Fixes Foreign Key problem in DB
+			customerEntity.setCustomerAddress(customerAddressEntity);
 
 			Date date = new Date(System.currentTimeMillis());
 
