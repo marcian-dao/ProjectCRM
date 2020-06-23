@@ -1,11 +1,3 @@
-/*Colors: 
-
-		 #FF4400(#f40) 	-red-orange-neon-text-color
-  		 #0088FF(#08F)	-blue-neon-border-color
-	     #191970		-Midnight Blue
-	     #FD953E		-Orange
-	     #C6E2FF        -blue button shadow
-*/
 @font-face {
     font-family: 'moondog_zeroregular';
     src: url('../fonts/moondogzero-ywv-webfont.woff2') format('woff2'),
@@ -152,7 +144,7 @@
 
 html,body {
 	padding: 40px;
-	background-color: navy;
+	background-color: #191970;
 	background: url('http://getwallpapers.com/wallpaper/full/3/5/7/170948.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -201,9 +193,8 @@ nav a::before {
 nav a.selected { 	
 	z-index: 2;
 	color:#f40;
-	
-	
 }
+
 nav a.selected:hover{
 	text-align: center;
 	text-shadow: 0px 0px 20px #800000;
@@ -228,9 +219,7 @@ nav a#userRole {
 	background-position:
 	    top 0px left 0px,
 	    top 52% right 0px,
-	    top 0px left 0px;
-    
-
+	    top 0px left 0px; 
 	border-radius: .3em;
 	z-index: 99;
 	-webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
@@ -282,7 +271,6 @@ body main {
         inset 0 0 .5rem var(--neon-border-color),
         0 0 2rem var(--neon-border-color),
         inset 0 0 1rem var(--neon-border-color);
-
 	     /* animation: neon .08s ease-in-out infinite alternate, flash_border .08s ease-in-out infinite;  
         animation-delay: .5s;*/      
     }
@@ -301,6 +289,7 @@ body main {
 	-webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+	position: relative;
 }
 #container #content .btn {
 	width: 5rem !important;
@@ -405,7 +394,6 @@ tr {
 	border-top: 1px solid #696969;
 	text-align: center;	
 	position: relative;
-	/*z-index: 10;*/
   }
 
 #bckgnd{
@@ -462,8 +450,8 @@ h2 {
 	background: transparent;
 	font-family: 'nebularegular', sans-serif;
 	width:100%;
-	
 }
+
 #add-user input[type=button]{
 	border-radius: .25rem;
 	background-color: hsla(27,98%,62%,0.7);
@@ -473,18 +461,12 @@ h2 {
 	-webkit-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
 	-moz-box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
 	box-shadow: 0px 0px 10px 1px rgba(209,136,74,0.75);
-
 	background-image:  url("../img/polyester-lite.png");
 }
 
 #add-user input[type=button]:hover{
-	/*background-color: hsla(27,98%,62%,1.0);*/
-
-
-background: -webkit-radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
-background: radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
-
-
+	background: -webkit-radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
+	background: radial-gradient(rgb(240, 212, 0), rgb(237, 165, 22));
 	color: #191970;
 	text-shadow: 1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF, -1px 1px #FFF;
 }

@@ -54,10 +54,8 @@
 
 html,body{
 	font-family: 'nebularegular';
-	background-color: #010005;
-	background-image: url('http://getwallpapers.com/wallpaper/full/9/a/c/1516292-star-wars-star-destroyer-wallpaper-1920x1080-cell-phone.jpg');
+	background: #010005 url('http://getwallpapers.com/wallpaper/full/9/a/c/1516292-star-wars-star-destroyer-wallpaper-1920x1080-cell-phone.jpg') repeat;
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-attachment:fixed;
 	height: 100%;
 	width:auto;
@@ -93,24 +91,19 @@ html,body{
 	align-content: center;
 }
 #nebula{	
-	font-family: inherit;
 	width:auto;
 	border: unset;
 	background: transparent; 
 }
 
 #nebula h3{
-	font-family: inherit !important;
-	color: #CCCDBF;
+	font-family:'nebularegular';
+	color: #CCCDBF;	
 	font-size: 2rem;
 	text-align: center;
 	padding: .5rem;
 	margin-top: 1rem;
-	margin-bottom: unset;
-	background: -webkit-linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
-	background: linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
-	background-clip: text;
-	-webkit-text-fill-color: transparent;	    
+	margin-bottom: unset;    
 	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
 }
 
@@ -165,7 +158,8 @@ html,body{
 	background-color: #FFF;
 	font-family: 'moondog_thirtyregular';
 	color: #676861;
-}
+}	
+
 .form-input::placeholder{
 	color: #FD953E;
 }

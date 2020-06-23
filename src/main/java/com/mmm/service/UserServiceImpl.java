@@ -57,6 +57,8 @@ public class UserServiceImpl implements UserService {
 		
 		user.setRoles(userRoles);		
 
+		
+		 // save user in the database
 		userDAO.addNewUser(user);
 	}
 

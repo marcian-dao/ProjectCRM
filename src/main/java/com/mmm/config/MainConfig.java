@@ -1,3 +1,8 @@
+/*After using Maven archetype: Web... we have to change RRC>>Properties>>ProjectFacets>>Dynamic Web Module to 4.0
+To do this follow:
+https://crunchify.com/how-to-fix-cannot-change-version-of-project-facet-dynamic-web-module-to-3-0-error-in-eclipse/
+*/
+
 package com.mmm.config;
 
 import org.springframework.beans.factory.annotation.Autowired;

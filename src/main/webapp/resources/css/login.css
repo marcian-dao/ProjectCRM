@@ -48,12 +48,11 @@
 }
 
 html,body{
-	background: #FFF url('http://getwallpapers.com/wallpaper/full/c/8/8/1480972-mars-wallpaper-hd-1920x1080-for-ios.jpg') no-repeat;
+	background: #000 url('http://getwallpapers.com/wallpaper/full/c/8/8/1480972-mars-wallpaper-hd-1920x1080-for-ios.jpg') repeat;
 	background-size: cover;
 }
 
-.card{
-	
+.card{	
 	margin-top: auto;
 	margin-bottom: auto;
 	width: 400px;
@@ -109,7 +108,7 @@ html,body{
 .card-body .input-group-prepend span{
 	width: 50px;
 	background-color: #FD953E;
-	color: #FFF;
+	color: #000;
 	border: none;
 }
 

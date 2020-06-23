@@ -54,14 +54,13 @@
 }
 
 html,body{
-	background-color: #010005;
-	background-image: url('http://getwallpapers.com/wallpaper/full/2/e/5/1376997-gorgerous-cool-earth-backgrounds-1920x1080-photo.jpg');
+	background: #010005 url('http://getwallpapers.com/wallpaper/full/2/e/5/1376997-gorgerous-cool-earth-backgrounds-1920x1080-photo.jpg') repeat;
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-attachment:fixed;
 	height: 100%;
 	width:auto;
 }
+
 .alert-danger{
 	font-family: 'moondog_thirtyregular';
 	background: transparent url("../img/polyester-lite.png") !important;
@@ -102,11 +101,7 @@ html,body{
 	font-size: 2rem;
 	text-align: center;
 	padding: .5rem;
-	margin-bottom: unset;
-	background: -webkit-linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
-	background: linear-gradient(164deg, rgb(253, 149, 62), rgb(255, 255, 245));
-	background-clip: text;
-	-webkit-text-fill-color: transparent;	    
+	margin-bottom: unset;    
 	text-shadow: #F6EDCE 0 0 .1em, 0 0 .3em;
 }
 
@@ -129,11 +124,9 @@ html,body{
 	-moz-box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
 	box-shadow: inset 0px 0px 10px 1px rgba(209,136,74,0.75);
 }
-
 .card-body .form-group .form-input{
 	background-color: #FFF;
 }	
-
 .form-input::placeholder{
 	color: #FD953E;
 }

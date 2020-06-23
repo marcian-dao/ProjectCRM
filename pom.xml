@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mb</groupId>
-	<artifactId>projectMaven</artifactId>
+	<artifactId>ProjectCRM</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>projectMaven Maven Webapp</name>
+	<name>ProjectCRM</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
