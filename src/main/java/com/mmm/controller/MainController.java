@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mmm.customer.CustomerAddress;
@@ -69,7 +70,7 @@ public class MainController {
 
 		} else {	
 			
-			customerEntity.setCustomerAddress(customerAddressEntity); // Fixes Foreign Key problem in DB
+			customerEntity.setCustomerAddress(customerAddressEntity); 
 
 			Date date = new Date(System.currentTimeMillis());
 
@@ -86,7 +87,7 @@ public class MainController {
 	public String displayCustomerAddress(@RequestParam("customerId") int theId, Model customerModel, Model addressModel) {
 
 		
-		CustomerDetails theCustomreName = customerService.getCustomer(theId);
+		CustomerDetails theCustomreName = customerService.getCustomerById(theId);
 		CustomerAddress theCustomerAddress = customerService.getCustomerAddress(theId);
 		
 		customerModel.addAttribute("customer", theCustomreName);
@@ -100,7 +101,7 @@ public class MainController {
 	@GetMapping("/update")
 	public String updateForm(@RequestParam("customerId") int theId, Model theCustModel, Model theAddressModel) {
 
-		CustomerDetails theCustomerDetails = customerService.getCustomer(theId);
+		CustomerDetails theCustomerDetails = customerService.getCustomerById(theId);
 		
 		CustomerAddress theCustomerAddress = theCustomerDetails.getCustomerAddress();
 
@@ -122,7 +123,7 @@ public class MainController {
 	@RequestMapping("/showAllCustomers")
 	public String showCustomersList(Model model) {
 
-		List<CustomerDetails> theCustomers = customerService.getCustomers();
+		List<CustomerDetails> theCustomers = customerService.getAllCustomers();
 
 		model.addAttribute("customersListModel", theCustomers);
 
@@ -132,10 +133,17 @@ public class MainController {
 	@GetMapping("/search")
 	public String searchForTheCustomer(@RequestParam("theSearchName") String name, Model theModel) {
 
-		List<CustomerDetails> theCustomers = customerService.getCustomerbyName(name);
+		List<CustomerDetails> theCustomers = customerService.getCustomerByName(name);
 
 		theModel.addAttribute("customersListModel", theCustomers);
 
 		return "displayAllCustomers.jsp";
 	}
+	
+	@RequestMapping(value = { "/404" }, method = RequestMethod.GET)
+	public String NotFoundPage() {
+		
+		return "404.html";
+	}
+	
 }

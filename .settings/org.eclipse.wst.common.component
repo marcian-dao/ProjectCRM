@@ -12,6 +12,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/img"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/mp3"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/fonts"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/resources/appProperties"/>
         <property name="context-root" value="projectMaven"/>
         <property name="java-output-path" value="/projectMaven/target/classes"/>
     </wb-module>

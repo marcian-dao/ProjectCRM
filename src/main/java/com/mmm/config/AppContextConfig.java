@@ -24,7 +24,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @ComponentScan(basePackages = "com.mmm")
 @PropertySources({
 		@PropertySource("classpath:security-persistence-mysql.properties"),
-		@PropertySource("classpath:thValidationErrors.properties")
+		@PropertySource("classpath:thValidationErrors.properties"),
+		@PropertySource("classpath:application.properties")
 })
 public class AppContextConfig {
 

@@ -18,8 +18,8 @@ public class CustomerServisImpl implements CustomerService {
 
 	@Override
 	@Transactional
-	public List<CustomerDetails> getCustomers() {
-		return customerDao.getCustomers();
+	public List<CustomerDetails> getAllCustomers() {
+		return customerDao.getAllCustomers();
 	}
 
 	@Override
@@ -36,9 +36,9 @@ public class CustomerServisImpl implements CustomerService {
 
 	@Override
 	@Transactional
-	public CustomerDetails getCustomer(int theId) {
+	public CustomerDetails getCustomerById(int theId) {
 
-		return customerDao.getCustomer(theId);
+		return customerDao.getCustomerById(theId);
 
 	}
 	
@@ -51,9 +51,9 @@ public class CustomerServisImpl implements CustomerService {
 
 	@Override
 	@Transactional
-	public List<CustomerDetails> getCustomerbyName(String name) {
+	public List<CustomerDetails> getCustomerByName(String name) {
 
-		return customerDao.getCustomerbyName(name);
+		return customerDao.getCustomerByName(name);
 
 	}
 }
