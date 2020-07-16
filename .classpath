@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src/main/webapp/resources/appProperties"/>
+	<classpathentry kind="src" path="src/main/webapp/resources/json"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/js"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/fonts"/>
 	<classpathentry kind="src" path="src/main/webapp/resources/mp3"/>

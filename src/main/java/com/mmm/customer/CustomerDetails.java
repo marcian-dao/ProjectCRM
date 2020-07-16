@@ -18,6 +18,9 @@ import javax.validation.constraints.Size;
 
 import org.springframework.stereotype.Component;
 
+import lombok.Data;
+
+@Data
 @Component
 @Entity
 @Table(name = "customer_one")
@@ -26,14 +29,6 @@ public class CustomerDetails {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "customer_address_id")
 	private CustomerAddress customerAddress;
-
-	public CustomerAddress getCustomerAddress() {
-		return customerAddress;
-	}
-
-	public void setCustomerAddress(CustomerAddress customerAddress) {
-		this.customerAddress = customerAddress;
-	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -63,70 +58,4 @@ public class CustomerDetails {
 	@Column(name = "registration_date")
 	@Temporal(TemporalType.DATE)
 	private Date registrationDate;
-
-	public Date getRegistrationDate() {
-		return registrationDate;
-	}
-
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	
-	public CustomerDetails() {	
-
-	}
-
-	public CustomerDetails(CustomerAddress customerAddress,
-			@NotNull(message = "this field is required") @Size(min = 2, max = 20) String firstName,
-			@Size(min = 2, max = 20) @NotNull(message = "this field is required") String lastName,
-			@Size(min = 2, max = 20) @NotNull(message = "this field is required") String email,
-			@Size(min = 2, max = 20) @NotNull(message = "this field is required") String phone, Date registrationDate) {
-		
-		this.customerAddress = customerAddress;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.phone = phone;
-		this.registrationDate = registrationDate;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}	
 }

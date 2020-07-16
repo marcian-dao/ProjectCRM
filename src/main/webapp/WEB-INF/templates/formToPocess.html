@@ -154,7 +154,7 @@
 				   
 									<select class="form-input" required="required" th:field="*{country}">
 
-										<option th:each="country : ${customerAddress.countryOptions}" 
+										<option th:each="country : ${customerAddress.countries}" 
 												th:text="${country.value}" 
 												th:value="${country.key}" 
 												value="XXX">Country
